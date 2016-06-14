@@ -1,0 +1,13 @@
+<resource>
+	host = http://ahul.github.io
+	filename = imoveis.xml
+	filedir = resource
+</resource>
+<apiserver>
+	host = http://httpbin.org
+	url  = put
+</apiserver>
+<constants>
+	updateprefix = "Atualizado em "
+	xmlKeyField = propertyCode
+</constatns>
