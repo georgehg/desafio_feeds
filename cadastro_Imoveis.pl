@@ -16,8 +16,6 @@ use JSON;
 use REST::Client;
 use XML::LibXML;
 
-#use Data::Dumper;
-
 #---- Process name and version
 my $program_name = 'feeds';
 my $vn           = "1.0";
