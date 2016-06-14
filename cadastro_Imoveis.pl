@@ -15,6 +15,7 @@ use Method::Signatures;
 use JSON;
 use REST::Client;
 use XML::LibXML;
+use File::Path;
 
 #---- Process name and version
 my $program_name = 'feeds';
@@ -106,7 +107,10 @@ func logdebug($msg) {
 
 method dowloadFile() {
 
-	my $xmlFileName = $config{resource}{filedir} . "/" . $config{resource}{filename} . "_" . getStrDate();
+	my $resourceDir = $config{resource}{filedir};
+	mkdir $resourceDir unless (-d $resourceDir) ;
+
+	my $xmlFileName = $resourceDir . "/" . $config{resource}{filename} . "_" . getStrDate();
 
     my %resourceServer;
     $resourceServer{host} = $config{resource}{host};
