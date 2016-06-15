@@ -1,6 +1,7 @@
 #!/usr/bin/perl
 
 use v5.12;
+use lib 'local/lib/perl5';
 
 use strict;
 use warnings;
@@ -15,7 +16,6 @@ use Method::Signatures;
 use JSON;
 use REST::Client;
 use XML::LibXML;
-use File::Path;
 
 #---- Process name and version
 my $program_name = 'feeds';
